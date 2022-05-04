@@ -1,7 +1,7 @@
 const config = `
 <View>
   <Image name="img" value="$image"></Image>
-  <RectangleLabels name="tag" toName="img" fillOpacity="0.5" strokeWidth="5">
+  <RectangleLabels name="tag" toName="img" fillOpacity="0" strokeWidth="5">
     <Label value="Planet"></Label>
     <Label value="Moonwalker" background="blue"></Label>
   </RectangleLabels>

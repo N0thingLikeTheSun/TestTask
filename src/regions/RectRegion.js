@@ -361,6 +361,14 @@ const HtxRectangleView = ({ item }) => {
           item.setHighlight(false);
           item.onClickRegion(e);
         }}
+        //Task #1 Delete Region by Double-Clicking
+        onDblClick={e=>{
+          if (!item.annotation.editable || item.parent.getSkipInteractions()) return;
+          if (store.annotationStore.selected.relationMode) {
+            stage.container().style.cursor = Constants.DEFAULT_CURSOR;
+          }
+          item.deleteRegion(e);
+        }}
         listening={!suggestion && item.editable}
       />
       <LabelOnRect item={item} color={regionStyles.strokeColor} strokewidth={regionStyles.strokeWidth} />

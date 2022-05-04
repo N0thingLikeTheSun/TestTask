@@ -356,7 +356,7 @@ export default types
           c.unselectAll();
         }
       });
-
+      
       hotkeys.addNamed("region:delete", () => {
         const c = self.annotationStore.selected;
 

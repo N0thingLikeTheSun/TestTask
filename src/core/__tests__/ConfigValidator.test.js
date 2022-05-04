@@ -14,7 +14,7 @@ it.skip("Should fail if a tag referenced by toName doesn't exist", () => {
   const result = Tree.treeToModel(`
   <View>
     <Image name="img1" value="$image"></Image>
-    <RectangleLabels name="tag" toName="img" fillOpacity="0.5" strokeWidth="5">
+    <RectangleLabels name="tag" toName="img" fillOpacity="0" strokeWidth="5">
       <Label value="Planet"></Label>
       <Label value="Moonwalker" background="blue"></Label>
     </RectangleLabels>
@@ -30,7 +30,7 @@ it.skip("Should fail if a tag referenced by toName is not image", () => {
   const result = Tree.treeToModel(`
   <View>
     <HyperText name="img" value="$text"></HyperText>
-    <RectangleLabels name="tag" toName="img" fillOpacity="0.5" strokeWidth="5">
+    <RectangleLabels name="tag" toName="img" fillOpacity="0" strokeWidth="5">
       <Label value="Planet"></Label>
       <Label value="Moonwalker" background="blue"></Label>
     </RectangleLabels>
@@ -46,7 +46,7 @@ it.skip("Should fail if tag lacks mandatory attribute toName", () => {
   const result = Tree.treeToModel(`
   <View>
     <Image name="img" value="$image"></Image>
-    <RectangleLabels name="tag" fillOpacity="0.5" strokeWidth="5">
+    <RectangleLabels name="tag" fillOpacity="0" strokeWidth="5">
       <Label value="Planet"></Label>
       <Label value="Moonwalker" background="blue"></Label>
     </RectangleLabels>
